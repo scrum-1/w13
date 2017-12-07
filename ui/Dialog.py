@@ -8,7 +8,7 @@ Module implementing Dialog.
 from PyQt5.QtWidgets import QDialog
 
 from .Ui_Dialog import Ui_Dialog
-import math
+#import math
 
 
 # Dialog 類別同時繼承 QDialog 與 Ui_Dialog 類別
