@@ -28,6 +28,25 @@ class Dialog(QDialog, Ui_Dialog):
         # 上一行在 Python3 可以寫為 super().__init__()
         # 利用 Ui_Dialog 類別中的 setupUi 方法, 以 self 視窗部件建立使用者介面
         self.setupUi(self)
+
+'''
+# Dialog 類別同時繼承 QDialog 與 Ui_Dialog 類別
+class Dialog(QDialog, Ui_Dialog):
+    """
+    Class documentation goes here. (若有類別相關說明文件內容, 放在此處)
+    """
+    def __init__(self, parent=None):
+        """
+        Constructor (類別建構子)
+        
+        @param parent reference to the parent widget
+        @type QWidget
+        """
+        # 利用 super 類別調用 parent 類別中的建構子
+        super(Dialog, self).__init__(parent)
+        # 上一行在 Python3 可以寫為 super().__init__()
+        # 利用 Ui_Dialog 類別中的 setupUi 方法, 以 self 視窗部件建立使用者介面
+        self.setupUi(self)
         # 以上程式碼由 Eric6 表單頁面中的滑鼠右鍵, Generate Dialog Code 指令產生
         # 當多個 signal 同時指向同一個 slot 處理時, 採用 for loop
         num_button = [self.one,  self.two,  \
@@ -311,3 +330,4 @@ class Dialog(QDialog, Ui_Dialog):
     def abortOperation(self):
         self.clearAll()
         self.display.setText("####")
+'''
