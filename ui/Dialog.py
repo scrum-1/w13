@@ -8,9 +8,28 @@ Module implementing Dialog.
 from PyQt5.QtWidgets import QDialog
 
 from .Ui_Dialog import Ui_Dialog
-import math
+#import math
 
 
+# Dialog 類別同時繼承 QDialog 與 Ui_Dialog 類別
+class Dialog(QDialog, Ui_Dialog):
+    """
+    Class documentation goes here. (若有類別相關說明文件內容, 放在此處)
+    """
+    def __init__(self, parent=None):
+        """
+        Constructor (類別建構子)
+        
+        @param parent reference to the parent widget
+        @type QWidget
+        """
+        # 利用 super 類別調用 parent 類別中的建構子
+        super(Dialog, self).__init__(parent)
+        # 上一行在 Python3 可以寫為 super().__init__()
+        # 利用 Ui_Dialog 類別中的 setupUi 方法, 以 self 視窗部件建立使用者介面
+        self.setupUi(self)
+
+'''
 # Dialog 類別同時繼承 QDialog 與 Ui_Dialog 類別
 class Dialog(QDialog, Ui_Dialog):
     """
@@ -311,3 +330,4 @@ class Dialog(QDialog, Ui_Dialog):
     def abortOperation(self):
         self.clearAll()
         self.display.setText("####")
+'''
